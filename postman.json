@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "57149608-83ef-4598-b1dc-ec13c0b99751",
+		"name": "Respawn Master",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/servers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{respawn_master_api}}/servers",
+					"host": [
+						"{{respawn_master_api}}"
+					],
+					"path": [
+						"servers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/servers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ip\": \"127.0.0.1\",\n\t\"port\": \"8081\"\n}"
+				},
+				"url": {
+					"raw": "{{respawn_master_api}}/servers",
+					"host": [
+						"{{respawn_master_api}}"
+					],
+					"path": [
+						"servers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
