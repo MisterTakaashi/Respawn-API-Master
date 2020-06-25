@@ -7,10 +7,13 @@ const router = require('./router');
 
 mongoose.connect('mongodb://db/respawn');
 
+const port = 3000;
 const app = new koa();
 
 app.use(koaJson());
 app.use(koaBodyParser());
 app.use(router.routes());
 
-app.listen(3000);
+app.listen(port, () => {
+    console.log('Server listening on port', port);
+});
