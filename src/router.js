@@ -1,6 +1,17 @@
 const router = require('koa-router')();
 
 const ServersController = require('./controllers/servers');
+const InstancesController = require('./controllers/instances');
+
+// Instances
+
+router.get('/instances', async (ctx, next) => {
+  await new InstancesController().index(ctx, next);
+});
+
+router.post('/instances', async (ctx, next) => {
+  await new InstancesController().create(ctx, next);
+});
 
 // Servers
 
